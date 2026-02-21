@@ -1,0 +1,769 @@
+version: 1
+source:
+  csv_file: Astraline addressing - Main.csv
+  generated_utc: '2026-02-21T20:32:57+00:00'
+summary:
+  total_records: 66
+  device_count: 16
+  managed_device_count: 14
+  link_count_excluding_loopbacks: 26
+  vrfs:
+  - cust-a
+  - cust-b
+  - default
+devices:
+- id: P1
+  display_name: P1
+  role: P
+  site_pop: Core West
+  oobm_mgmt_ip: 192.168.1.201/24
+- id: P2
+  display_name: P2
+  role: P
+  site_pop: Core West
+  oobm_mgmt_ip: 192.168.1.202/24
+- id: P3
+  display_name: P3
+  role: P
+  site_pop: Core East
+  oobm_mgmt_ip: 192.168.1.203/24
+- id: P4
+  display_name: P4
+  role: P
+  site_pop: Core East
+  oobm_mgmt_ip: 192.168.1.204/24
+- id: RR1
+  display_name: RR1
+  role: RR
+  site_pop: Core West
+  oobm_mgmt_ip: 192.168.1.205/24
+- id: RR2
+  display_name: RR2
+  role: RR
+  site_pop: Core East
+  oobm_mgmt_ip: 192.168.1.206/24
+- id: PE1
+  display_name: PE1
+  role: PE
+  site_pop: Edge West
+  oobm_mgmt_ip: 192.168.1.207/24
+- id: PE2
+  display_name: PE2
+  role: PE
+  site_pop: Edge East
+  oobm_mgmt_ip: 192.168.1.208/24
+- id: PE3
+  display_name: PE3
+  role: PE
+  site_pop: Edge East
+  oobm_mgmt_ip: 192.168.1.209/24
+- id: CPE1
+  display_name: CPE1
+  role: CPE
+  site_pop: Customer A
+  oobm_mgmt_ip: 192.168.1.210/24
+- id: CPE2
+  display_name: CPE2
+  role: CPE
+  site_pop: Customer B
+  oobm_mgmt_ip: 192.168.1.211/24
+- id: TR-A-W
+  display_name: Transit A West
+  role: Upstream
+  site_pop: IX West
+  oobm_mgmt_ip: 192.168.1.212/24
+- id: TR-A-E
+  display_name: Transit A East
+  role: Upstream
+  site_pop: IX East
+  oobm_mgmt_ip: 192.168.1.213/24
+- id: TR-B-E
+  display_name: Transit B East
+  role: Upstream
+  site_pop: IX East
+  oobm_mgmt_ip: 192.168.1.214/24
+- id: SUB-A
+  display_name: Substation A
+  role: Host
+  site_pop: Customer A
+  oobm_mgmt_ip: null
+- id: SUB-B
+  display_name: Substation B
+  role: Host
+  site_pop: Customer B
+  oobm_mgmt_ip: null
+management:
+- device: P1
+  oobm_mgmt_ip: 192.168.1.201/24
+- device: P2
+  oobm_mgmt_ip: 192.168.1.202/24
+- device: P3
+  oobm_mgmt_ip: 192.168.1.203/24
+- device: P4
+  oobm_mgmt_ip: 192.168.1.204/24
+- device: RR1
+  oobm_mgmt_ip: 192.168.1.205/24
+- device: RR2
+  oobm_mgmt_ip: 192.168.1.206/24
+- device: PE1
+  oobm_mgmt_ip: 192.168.1.207/24
+- device: PE2
+  oobm_mgmt_ip: 192.168.1.208/24
+- device: PE3
+  oobm_mgmt_ip: 192.168.1.209/24
+- device: CPE1
+  oobm_mgmt_ip: 192.168.1.210/24
+- device: CPE2
+  oobm_mgmt_ip: 192.168.1.211/24
+- device: TR-A-W
+  oobm_mgmt_ip: 192.168.1.212/24
+- device: TR-A-E
+  oobm_mgmt_ip: 192.168.1.213/24
+- device: TR-B-E
+  oobm_mgmt_ip: 192.168.1.214/24
+loopbacks:
+- link_id: P1-lo0
+  device: P1
+  loopback_ip: 10.255.0.11/32
+  net_address: 49.0001.0102.5500.0011.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: P2-lo0
+  device: P2
+  loopback_ip: 10.255.0.12/32
+  net_address: 49.0001.0102.5500.0012.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: P3-lo0
+  device: P3
+  loopback_ip: 10.255.0.13/32
+  net_address: 49.0001.0102.5500.0013.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: P4-lo0
+  device: P4
+  loopback_ip: 10.255.0.14/32
+  net_address: 49.0001.0102.5500.0014.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: RR1-lo0
+  device: RR1
+  loopback_ip: 10.255.0.111/32
+  net_address: 49.0001.0102.5500.0111.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: RR2-lo0
+  device: RR2
+  loopback_ip: 10.255.0.222/32
+  net_address: 49.0001.0102.5500.0222.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: PE1-lo0
+  device: PE1
+  loopback_ip: 10.255.0.21/32
+  net_address: 49.0001.0102.5500.0021.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: System Loopback
+- link_id: PE2-lo0
+  device: PE2
+  loopback_ip: 10.255.0.22/32
+  net_address: 49.0001.0102.5500.0022.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: Loopback
+- link_id: PE3-lo0
+  device: PE3
+  loopback_ip: 10.255.0.23/32
+  net_address: 49.0001.0102.5500.0023.00
+  vrf: default
+  routing_domain: IS-IS
+  notes: System Loopback
+- link_id: CPE1-lo0
+  device: CPE1
+  loopback_ip: 10.255.10.1/32
+  net_address: null
+  vrf: default
+  routing_domain: null
+  notes: Loopback
+- link_id: CPE2-lo0
+  device: CPE2
+  loopback_ip: 10.255.20.1/32
+  net_address: null
+  vrf: default
+  routing_domain: null
+  notes: System Loopback
+- link_id: TR-A-W-lo0
+  device: TR-A-W
+  loopback_ip: 10.255.1.1/32
+  net_address: null
+  vrf: default
+  routing_domain: null
+  notes: System Loopback
+- link_id: TR-A-E-lo0
+  device: TR-A-E
+  loopback_ip: 10.255.1.2/32
+  net_address: null
+  vrf: default
+  routing_domain: null
+  notes: System Loopback
+- link_id: TR-B-E-lo0
+  device: TR-B-E
+  loopback_ip: 10.255.2.1/32
+  net_address: null
+  vrf: default
+  routing_domain: null
+  notes: System Loopback
+links:
+- link_id: P3-RR2
+  vlan: 2107
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East
+  endpoints:
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.36/31
+    peer_device: RR2
+    peer_interface: null
+    notes: Route reflector
+  - device: RR2
+    role: RR
+    interface: null
+    ip: 10.0.0.37/31
+    peer_device: P3
+    peer_interface: null
+    notes: Route reflector
+- link_id: P4-RR2
+  vlan: 2108
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East
+  endpoints:
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.38/31
+    peer_device: RR2
+    peer_interface: null
+    notes: Route reflector
+  - device: RR2
+    role: RR
+    interface: null
+    ip: 10.0.0.39/31
+    peer_device: P4
+    peer_interface: null
+    notes: Route reflector
+- link_id: P1-P2-Link1
+  vlan: 1101
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.20/31
+    peer_device: P2
+    peer_interface: null
+    notes: Core Mesh
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.21/31
+    peer_device: P1
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P1-P2-Link2
+  vlan: 1102
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.22/31
+    peer_device: P2
+    peer_interface: null
+    notes: Core Mesh
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.23/31
+    peer_device: P1
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P1-RR1
+  vlan: 1107
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.32/31
+    peer_device: RR1
+    peer_interface: null
+    notes: Core Mesh
+  - device: RR1
+    role: RR
+    interface: null
+    ip: 10.0.0.33/31
+    peer_device: P1
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P2-RR1
+  vlan: 1108
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West
+  endpoints:
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.34/31
+    peer_device: RR1
+    peer_interface: null
+    notes: Core Mesh
+  - device: RR1
+    role: RR
+    interface: null
+    ip: 10.0.0.35/31
+    peer_device: P2
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P1-P3
+  vlan: 3105
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Core East
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.4/31
+    peer_device: P3
+    peer_interface: null
+    notes: Inter-Core Link
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.5/31
+    peer_device: P1
+    peer_interface: null
+    notes: Inter-Core Link
+- link_id: P1-P4
+  vlan: 3103
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Core East
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.6/31
+    peer_device: P4
+    peer_interface: null
+    notes: Inter-Core Link
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.7/31
+    peer_device: P1
+    peer_interface: null
+    notes: Inter-Core Link
+- link_id: P2-P3
+  vlan: 3104
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Core East
+  endpoints:
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.8/31
+    peer_device: P3
+    peer_interface: null
+    notes: Inter-Core Link
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.9/31
+    peer_device: P2
+    peer_interface: null
+    notes: Inter-Core Link
+- link_id: P2-P4
+  vlan: 3106
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Core East
+  endpoints:
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.10/31
+    peer_device: P4
+    peer_interface: null
+    notes: Inter-Core Link
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.11/31
+    peer_device: P2
+    peer_interface: null
+    notes: Inter-Core Link
+- link_id: PE1-CPE1
+  vlan: 1201
+  purpose: access
+  vrf: cust-a
+  routing_domain: eBGP
+  site_pop: Edge West
+  endpoints:
+  - device: PE1
+    role: PE
+    interface: null
+    ip: 10.1.0.0/31
+    peer_device: CPE1
+    peer_interface: WAN1
+    notes: Substation A Link
+  - device: CPE1
+    role: CPE
+    interface: WAN1
+    ip: 10.1.0.1/31
+    peer_device: PE1
+    peer_interface: null
+    notes: Uplink to SP
+- link_id: PE1-TR-A-W
+  vlan: 1301
+  purpose: transit
+  vrf: default
+  routing_domain: eBGP
+  site_pop: Edge West - Transit West
+  endpoints:
+  - device: PE1
+    role: PE
+    interface: null
+    ip: 10.100.0.0/31
+    peer_device: TR-A-W
+    peer_interface: null
+    notes: ASBR
+  - device: TR-A-W
+    role: Upstream
+    interface: null
+    ip: 10.100.0.1/31
+    peer_device: PE1
+    peer_interface: null
+    notes: ASBR
+- link_id: PE1-P1
+  vlan: 1109
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Edge West
+  endpoints:
+  - device: P1
+    role: P
+    interface: null
+    ip: 10.0.0.0/31
+    peer_device: PE1
+    peer_interface: null
+    notes: Downlink to Edge West
+  - device: PE1
+    role: PE
+    interface: null
+    ip: 10.0.0.1/31
+    peer_device: P1
+    peer_interface: null
+    notes: Uplink to Core West
+- link_id: PE1-P2
+  vlan: 1110
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core West - Edge West
+  endpoints:
+  - device: P2
+    role: P
+    interface: null
+    ip: 10.0.0.2/31
+    peer_device: PE1
+    peer_interface: null
+    notes: Downlink to Edge West
+  - device: PE1
+    role: PE
+    interface: null
+    ip: 10.0.0.3/31
+    peer_device: P2
+    peer_interface: null
+    notes: Uplink to Core West
+- link_id: P3-P4-Link1
+  vlan: 2101
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East
+  endpoints:
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.24/31
+    peer_device: P4
+    peer_interface: null
+    notes: Core Mesh
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.25/31
+    peer_device: P3
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P3-P4-Link2
+  vlan: 2102
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East
+  endpoints:
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.26/31
+    peer_device: P4
+    peer_interface: null
+    notes: Core Mesh
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.27/31
+    peer_device: P3
+    peer_interface: null
+    notes: Core Mesh
+- link_id: P3-PE2
+  vlan: 2109
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East - Edge East
+  endpoints:
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.12/31
+    peer_device: PE2
+    peer_interface: null
+    notes: Downlink to Edge
+  - device: PE2
+    role: PE
+    interface: null
+    ip: 10.0.0.13/31
+    peer_device: P3
+    peer_interface: null
+    notes: Uplink to Core
+- link_id: P3-PE3
+  vlan: 2111
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East - Edge East
+  endpoints:
+  - device: P3
+    role: P
+    interface: null
+    ip: 10.0.0.16/31
+    peer_device: PE3
+    peer_interface: null
+    notes: Downlink to Edge
+  - device: PE3
+    role: PE
+    interface: null
+    ip: 10.0.0.17/31
+    peer_device: P3
+    peer_interface: null
+    notes: Uplink to Core
+- link_id: P4-PE2
+  vlan: 2112
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East - Edge East
+  endpoints:
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.14/31
+    peer_device: PE2
+    peer_interface: null
+    notes: Downlink to Edge
+  - device: PE2
+    role: PE
+    interface: null
+    ip: 10.0.0.15/31
+    peer_device: P4
+    peer_interface: null
+    notes: Uplink to Core
+- link_id: P4-PE3
+  vlan: 2110
+  purpose: underlay
+  vrf: default
+  routing_domain: IS-IS
+  site_pop: Core East - Edge East
+  endpoints:
+  - device: P4
+    role: P
+    interface: null
+    ip: 10.0.0.18/31
+    peer_device: PE3
+    peer_interface: null
+    notes: Downlink to Edge
+  - device: PE3
+    role: PE
+    interface: null
+    ip: 10.0.0.19/31
+    peer_device: P4
+    peer_interface: null
+    notes: Uplink to Core
+- link_id: TR-A-E-PE2
+  vlan: 2301
+  purpose: transit
+  vrf: default
+  routing_domain: eBGP
+  site_pop: Edge East - Transit East
+  endpoints:
+  - device: PE2
+    role: PE
+    interface: null
+    ip: 10.100.0.2/31
+    peer_device: TR-A-E
+    peer_interface: null
+    notes: ASBR
+  - device: TR-A-E
+    role: Upstream
+    interface: null
+    ip: 10.100.0.3/31
+    peer_device: PE2
+    peer_interface: null
+    notes: ASBR
+- link_id: TR-B-E-PE2
+  vlan: 2302
+  purpose: transit
+  vrf: default
+  routing_domain: eBGP
+  site_pop: Edge East - Transit East
+  endpoints:
+  - device: PE2
+    role: PE
+    interface: null
+    ip: 10.200.0.0/31
+    peer_device: TR-B-E
+    peer_interface: null
+    notes: ASBR
+  - device: TR-B-E
+    role: Upstream
+    interface: null
+    ip: 10.200.0.1/31
+    peer_device: PE2
+    peer_interface: null
+    notes: ASBR
+- link_id: PE2-CPE2
+  vlan: 2201
+  purpose: access
+  vrf: cust-b
+  routing_domain: eBGP
+  site_pop: Edge East
+  endpoints:
+  - device: PE2
+    role: PE
+    interface: null
+    ip: 10.2.0.0/31
+    peer_device: CPE2
+    peer_interface: WAN1
+    notes: Substation B Link
+  - device: CPE2
+    role: CPE
+    interface: WAN1
+    ip: 10.2.0.1/31
+    peer_device: PE2
+    peer_interface: null
+    notes: Uplink to SP
+- link_id: PE3-CPE2
+  vlan: 2202
+  purpose: access
+  vrf: cust-b
+  routing_domain: eBGP
+  site_pop: Edge East
+  endpoints:
+  - device: PE3
+    role: PE
+    interface: null
+    ip: 10.2.0.2/31
+    peer_device: CPE2
+    peer_interface: WAN2
+    notes: Substation B Link
+  - device: CPE2
+    role: CPE
+    interface: WAN2
+    ip: 10.2.0.3/31
+    peer_device: PE3
+    peer_interface: null
+    notes: Uplink to SP
+- link_id: CPE1-LAN1
+  vlan: 1202
+  purpose: lan
+  vrf: default
+  routing_domain: Connected
+  site_pop: Customer A
+  endpoints:
+  - device: CPE1
+    role: CPE
+    interface: LAN1
+    ip: 10.10.0.1/24
+    peer_device: SUB-A
+    peer_interface: eth0
+    notes: Substation A LAN
+  - device: SUB-A
+    role: Host
+    interface: eth0
+    ip: 10.10.0.2/24
+    peer_device: CPE1
+    peer_interface: LAN1
+    notes: Substation A LAN
+- link_id: CPE2-LAN1
+  vlan: 2203
+  purpose: lan
+  vrf: default
+  routing_domain: Connected
+  site_pop: Customer B
+  endpoints:
+  - device: CPE2
+    role: CPE
+    interface: LAN1
+    ip: 10.20.0.1/24
+    peer_device: SUB-B
+    peer_interface: eth0
+    notes: Substation B LAN
+  - device: SUB-B
+    role: Host
+    interface: eth0
+    ip: 10.20.0.2/24
+    peer_device: CPE2
+    peer_interface: LAN1
+    notes: Substation B LAN
