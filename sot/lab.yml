@@ -1,7 +1,11 @@
 version: 1
 source:
+  migrated_utc: '2026-02-22T11:19:17+00:00'
+  migrated_from:
+  - ipam/address-plan.yml
+  - ipam/asn-plan.yml
+  - topology/lab.yml
   csv_file: Astraline addressing - Main.csv
-  generated_utc: '2026-02-21T20:32:57+00:00'
 summary:
   total_records: 66
   device_count: 16
@@ -767,3 +771,13 @@ links:
     peer_device: CPE2
     peer_interface: LAN1
     notes: Substation B LAN
+asn:
+  status: incomplete_source_data
+  notes:
+  - No ASN fields were present in the source CSV.
+  - Populate provider, customer, and upstream ASNs before rendering BGP configs.
+  autonomous_systems:
+    provider: null
+    customers: {}
+    upstreams: {}
+topology: {}
