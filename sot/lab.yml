@@ -8,7 +8,7 @@ provider:
     rt: 65000:100
 
 nodes:
-  pe1: { platform: junos, role: pe, loopback: 10.255.0.1/32 }
+  pe1: { platform: junos, role: pe, loopback: 10.255.0.1/32, mgmt: { ip: 192.168.1.201/24, if: fxp0, gw: 192.168.1.1 } }
   p1:  { platform: frr,  role: p,  loopback: 10.255.0.2/32 }
   pe2: { platform: junos, role: pe, loopback: 10.255.0.3/32 }
   rr1: { platform: frr,  role: rr, loopback: 10.255.0.4/32 }
