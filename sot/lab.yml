@@ -4,11 +4,13 @@ provider:
     name: CUST-A
     rd: '65000:100'
     rt: '65000:100'
+
 isis:
   afi: 49
   area_id: '0001'
   selector: '00'
   level: 2
+
 nodes:
   pe1:
     platform: junos
@@ -24,14 +26,42 @@ nodes:
     platform: frr
     role: p
     loopback: 10.255.0.2/32
+    isis:
+      system_id: 0000.0000.0002
+    mgmt:
+      ip: 192.168.1.202/24
+      if: eth0
+      gw: 192.168.1.1
   pe2:
     platform: junos
     role: pe
     loopback: 10.255.0.3/32
+    isis:
+      system_id: 0000.0000.0003
+    mgmt:
+      ip: 192.168.1.203/24
+      if: fxp0
+      gw: 192.168.1.1
   rr1:
     platform: frr
     role: rr
-    loopback: 10.255.0.4/32
+    loopback: 10.255.0.24/32
+    isis:
+      system_id: 0000.0000.0024
+    mgmt:
+      ip: 192.168.1.224/24
+      if: eth0
+      gw: 192.168.1.1
+  rr2:
+    platform: frr
+    role: rr
+    loopback: 10.255.0.25/32
+    isis:
+      system_id: 0000.0000.0025
+    mgmt:
+      ip: 192.168.1.225/24
+      if: eth0
+      gw: 192.168.1.1
   ce1:
     platform: frr
     role: ce
@@ -42,6 +72,7 @@ nodes:
     role: ce
     asn: 65102
     lan: 192.168.20.0/24
+
 links:
   - a:
       node: pe1
@@ -83,6 +114,7 @@ links:
       node: ce2
       if: eth1
       ip: 172.16.20.2/30
+
 iec104:
   outstation_host:
     name: sub1
