@@ -2,6 +2,8 @@
 
 (Work in progress, this repo will be updated very frequently)
 
+Update 25 Feb: isis adjacency works for PE1 and P1, so I'll focus on making this repeateable by refactoring the VM creation scripts (see last line of this readme). 
+
 So far I'm setting up the dir structure and initial code from which I'll build first an MVP then a larger scale project.
 
 The goal of this project is to show the end-to-end architecture of large scale critical infrastructure communications (particularly, electric substations and eventually oil/gas pipelines) through a dedicated IP carrier. This carrier will also be used by other non-OT customers.

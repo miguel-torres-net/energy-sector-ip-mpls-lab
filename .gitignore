@@ -1,3 +1,3 @@
-# out/verify is ephemeral output from automation/verify/verify.sh
-out/verify/
-out/verify/**/*
+#don't want to pollute the repo while I'm building
+out/
+nms/
