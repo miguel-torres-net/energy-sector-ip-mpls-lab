@@ -17,6 +17,7 @@ Some of the technologies this project will use are:
 * Linux (Debian-based FRR routers and Linux hosts)
 * Python automation (starting with PyEZ for Junos. Its automatability is the main reason I chose this vendor)
 * IEC-104 client/master OT traffic (communication between electrical susbtations and a control center)
+    * Currently working on making a separate project for this
 * tcpdump to analyze said OT traffic
 * NMS/Monitoring (Observium)
 
