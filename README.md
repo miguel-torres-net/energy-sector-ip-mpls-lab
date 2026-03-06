@@ -2,7 +2,7 @@
 
 (Work in progress, this repo will be updated very frequently)
 
-Update 25 Feb: isis adjacency works for PE1 and P1, so I'll focus on making this repeateable by refactoring the VM creation scripts (see last line of this readme). 
+Update 6 March: I've been advancing a cert, so didn't have lots of time for the project. I've been thinking however about how to structure the project and future ones so it's scalable from the beginning without being overengineered either.
 
 So far I'm setting up the dir structure and initial code from which I'll build first an MVP then a larger scale project.
 
