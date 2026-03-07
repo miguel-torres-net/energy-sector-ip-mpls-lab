@@ -2,7 +2,7 @@
 
 (Work in progress, this repo will be updated very frequently)
 
-Update 6 March: I've been advancing a cert, so didn't have lots of time for the project. I've been thinking however about how to structure the project and future ones so it's scalable from the beginning without being overengineered either.
+Update 7 March: I've finished an MVP for the core. Now I'll set up a couple CPEs and see actual end-to-end reachability. IEC-104 will be added later. I'm not optimizing or enlarging the project yet.
 
 So far I'm setting up the dir structure and initial code from which I'll build first an MVP then a larger scale project.
 
