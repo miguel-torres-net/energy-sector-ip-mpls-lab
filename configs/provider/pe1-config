@@ -1,0 +1,41 @@
+set version 25.4R1.12
+set system host-name PE1-JUNOS
+set system root-authentication encrypted-password "SECRET"
+set system root-authentication ssh-ed25519 "SECRET"
+set system services ssh root-login allow
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system processes dhcp-service traceoptions file dhcp_logfile
+set system processes dhcp-service traceoptions file size 10m
+set system processes dhcp-service traceoptions level all
+set system processes dhcp-service traceoptions flag packet
+set interfaces ge-0/0/0 unit 0 family inet address 10.0.0.0/31
+set interfaces ge-0/0/0 unit 0 family iso
+set interfaces ge-0/0/0 unit 0 family mpls
+set interfaces ge-0/0/1 unit 0 family inet address 10.0.1.0/31
+set interfaces fxp0 unit 0 family inet address 192.168.1.211/24
+set interfaces lo0 unit 0 family inet address 10.255.0.101/32
+set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0101.00
+set routing-instances OT-WAN instance-type vrf
+set routing-instances OT-WAN protocols bgp group CE1 type external
+set routing-instances OT-WAN protocols bgp group CE1 local-address 10.0.1.0
+set routing-instances OT-WAN protocols bgp group CE1 family inet unicast
+set routing-instances OT-WAN protocols bgp group CE1 peer-as 65010
+set routing-instances OT-WAN protocols bgp group CE1 neighbor 10.0.1.1
+set routing-instances OT-WAN interface ge-0/0/1.0
+set routing-instances OT-WAN route-distinguisher 65000:101
+set routing-instances OT-WAN vrf-target target:65000:100
+set routing-instances OT-WAN vrf-table-label
+set routing-options router-id 10.255.0.101
+set routing-options autonomous-system 65000
+set routing-options static route 0.0.0.0/0 next-hop 192.168.1.1
+set protocols bgp group RR type internal
+set protocols bgp group RR local-address 10.255.0.101
+set protocols bgp group RR family inet-vpn unicast
+set protocols bgp group RR peer-as 65000
+set protocols bgp group RR neighbor 10.255.0.11
+set protocols isis interface ge-0/0/0.0 point-to-point
+set protocols isis interface lo0.0 passive
+set protocols isis level 1 disable
+set protocols ldp interface ge-0/0/0.0
