@@ -8,6 +8,4 @@ It connects an electric substation (IEC-104 outstation) and a control center (IE
 
 It carries traffic between both sites through the service provider network, with IPsec protecting the path between them.
 
-This repo includes the configs and documentation from validation scenarios, including IPsec reachability and IEC-104 protocol traffic.
-
-To be added next: end-to-end encrypted IEC-104 application layer communication between client and outstation.
+This repo includes the configs and documentation from validation scenarios, including IPsec-encrypted IEC-104 protocol traffic.
