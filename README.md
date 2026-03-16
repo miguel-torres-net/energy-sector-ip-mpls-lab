@@ -1,5 +1,7 @@
 # energy-sector-ip-mpls-lab
 
+![Topology diagram](docs/diagram.drawio.png)
+
 IP/MPLS + IPsec lab for critical infrastructure telecom, built with Junos and Linux FRR routers.
 
 It connects an electric substation (IEC-104 outstation) and a control center (IEC-104 client) through a dedicated service provider network, inspired by real life architectures used in CEE countries.
