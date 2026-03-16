@@ -1,6 +1,6 @@
 # energy-sector-ip-mpls-lab
 
-![Topology diagram](docs/diagram.drawio.png)
+![Topology diagram](docs/images/diagram.drawio.png)
 
 IP/MPLS + IPsec lab for critical infrastructure telecom, built with Junos and Linux FRR routers.
 
